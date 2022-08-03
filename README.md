@@ -1,8 +1,8 @@
 # Introduction
 Interested in ethical hacking in general, whether it is hardware or software. Enjoy doing CTF (Capture-The-Flag) cyber-security challenges in my free time.
 # CTF'S I have worked on
-PicoCTF
-Hacktivities
+-PicoCTF
+-Hacktivities
 
 
 My Hacking Mentality: Assume the system has already been breached.
