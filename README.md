@@ -1,5 +1,5 @@
 # Introduction
-My Interest's include Threat Analysis, Penetration Testing and Network automation (Software Defined Networks). Things I do for fun: scripting/coding and doing CTF (Capture-The-Flag) cyber-security challenges.
+My Interest's include Threat Analysis, Penetration Testing and Network Automation (Software Defined Networks). Things I do for fun: scripting/coding and doing CTF (Capture-The-Flag) cyber-security challenges.
 # CTF'S I have worked on
 1) PicoCTF 
 2) Hacktivities 
