@@ -1,5 +1,5 @@
 # Introduction
-Interested in ethical hacking in general, whether it is hardware or software. Enjoy scripting/condig and doing CTF (Capture-The-Flag) cyber-security challenges in my free time.
+Interested in ethical hacking in general, whether it is hardware or software. Enjoy scripting/coding and doing CTF (Capture-The-Flag) cyber-security challenges in my free time.
 # CTF'S I have worked on
 1) PicoCTF 
 2) Hacktivities
