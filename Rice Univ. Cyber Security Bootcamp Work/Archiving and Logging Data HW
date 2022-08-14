@@ -1,0 +1,158 @@
+Google Drive Link: https://docs.google.com/document/d/1LHGh6aYNkUAbjZZF1NkiYengLX9pWtFs-QbytOcK5R4/edit
+
+
+
+
+Archiving and Logging Data
+
+Make a copy of this document to work in, and then for each step, add the solution command below the prompt. Save and submit this completed file as your Challenge deliverable.
+
+
+Step 1: Create, Extract, Compress, and Manage tar Backup Archives
+
+Command to extract the TarDocs.tar archive to the current directory:
+
+tar -xf TarDocs.tar
+
+
+
+
+Command to create the Javaless_Doc.tar archive from the TarDocs/ directory, while excluding the TarDocs/Documents/Java directory:cat 
+
+sudo tar cvf Javaless_Doc.tar TarDocs/ --exclude=xTarDocs/Documents/Java:cat
+
+
+
+
+Command to ensure Java/ is not in the new Javaless_Docs.tar archive:
+
+tar -tvf Javaless_Docs.tar | grep ‘Java’
+
+
+
+
+Bonus
+ 
+Command to create an incremental archive called logs_backup_tar.gz with only changed files to snapshot.file for the /var/log directory:
+
+tar [options] [archive_name] --incremental=[snapshot file name] --level=0 [objects_to_archive]
+
+tar cvvWf logs_backup_tar.gz --incremental=snapshot.file --level=0 /var/log
+
+
+
+
+
+Critical Analysis Question
+
+Why wouldn't you use the options -x and -c at the same time with tar? -x is for extraction and -c is to create a new archive. 
+
+
+
+Step 2: Create, Manage, and Automate Cron Jobs
+
+Cron job for backing up the /var/log/auth.log file:
+
+6 * * 3 tar -zcfv /var/log/auth.log 
+
+
+
+Step 3: Write Basic Bash Scripts
+
+Brace expansion command to create the four subdirectories:
+
+~/exampledirectory/{subdirectory1,subdirectory2,etc}
+
+~/backups/{freemem,diskuse,openlist,freedisk}
+
+Or 
+
+mkdir -p backups/{freemem,diskuse,openlist,freedisk}
+
+
+
+
+Paste your system.sh script edits:
+
+#!/bin/bash
+
+cat /proc/meminfo | grep "MemFree" > ~/backups/freemem/free_mem.txt
+
+df -h > ~/backups/diskuse/disk_usage.txt
+
+sudo lsof > ~/backups/openlist/open_list.txt
+
+df -h > ~/backups/freedisk/free_disk.txt
+
+
+
+
+Command to make the system.sh script executable:
+
+Chmod +x system.sh
+
+Optional
+
+Commands to test the script and confirm its execution:
+
+./system
+
+
+
+Step 4. Manage Log File Sizes
+ 
+Run sudo nano /etc/logrotate.conf to edit the logrotate configuration file. 
+
+Configure a log rotation scheme that backs up authentication messages to the /var/log/auth.log. 
+
+Add your config file edits:
+
+# rotate log files weekly
+weekly
+# Rotates only the seven most recent logs
+rotate 7
+# Does not rotate empty logs
+noifempty
+# Delays compression
+delaycompress
+# Skips error messages for missing logs and continues to next log
+missingok
+
+/var/log/auth.log {
+    weekly
+       rotate 7
+       noifempty
+       delaycompress
+    missingok
+       Endscript
+}
+
+
+
+Bonus: Check for Policy and File Violations
+
+Command to verify `auditd` is active: 
+                        
+auditctl -s
+
+
+Command to set number of retained logs and maximum log file size:
+
+Maxsize ___
+Rotate ____
+Size ____
+
+
+
+
+Command to restart auditd:
+
+/sbin/service auditd restart
+
+
+
+
+
+
+
+
