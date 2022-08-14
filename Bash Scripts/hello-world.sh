@@ -27,7 +27,11 @@ Now,  make this script executable with the following command:
 
 
 $ chmod +x hello-world.sh 
-$ linuxconfig.org:~$ ./hello-world.sh 
+
+To run the scrip, type the following into the CLI:
+$ ./hello-world.sh 
+
+You should get the output of the echo command written inside of the script:
 Hello World
 $ 
 
