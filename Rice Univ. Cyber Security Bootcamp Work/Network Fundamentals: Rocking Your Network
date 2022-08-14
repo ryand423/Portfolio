@@ -1,0 +1,115 @@
+Google Drive Link: https://docs.google.com/document/d/11EYLZl54pRweqNKCi_Du4IamL7nPM9alTUSKqY6TUFk/edit
+
+
+
+
+Networking Fundamentals: Rocking your Network
+
+Make a copy of this document to work in, and then for each phase, add the solution below the prompt. Save and submit this completed file as your Challenge deliverable.
+
+
+Phase 1: “I’d like to Teach the World to ping”
+
+Command(s) used to run fping against the IP ranges:
+
+fping -g 15.199.95.80 15.199.95.106
+
+
+Summarize the results of the fping command(s):
+
+All the IPs within the range are unreachable
+
+
+List of IPs responding to echo requests:
+
+161.35.96.20
+
+
+
+
+Explain which OSI layer(s) your findings involve:
+
+Ping requests (ICMP) - Layer 3 - Network
+
+
+Mitigation recommendations (if needed):
+
+Run the command sudo nmap 161.35.96.20 -sS to see which ports are open
+
+
+
+Phase 2: “Some SYN for Nothin`”
+
+Which ports are open on the RockStar Corp server?
+
+22
+53
+
+
+Which OSI layer do SYN scans run on?
+
+OSI Layer:
+
+Layer 4 Transport Layer
+
+
+Explain how you determined which layer:
+
+Layer 4 processes transportation protocols. A port is a transport layer address.
+
+
+Mitigation suggestions (if needed):
+
+Disable ping responses on the application server
+
+
+
+Phase 3: “I Feel a DNS Change Comin’ On”
+
+Summarize your findings about why access to rollingstone.com is not working as expected from the RockStar Corp Hollywood office:
+
+It appears that it may be routed to some other IP address
+
+
+
+
+
+Command used to query Domain Name System records:
+
+nslookup
+
+
+Domain name findings:
+
+
+
+
+Explain what OSI layer DNS runs on:
+
+Layer 7 - Application layer 
+
+
+Mitigation suggestions (if needed):
+
+Modify the DNS hosts file to redirect to the correct IP address
+
+
+
+Phase 4: “ShARP Dressed Man”
+
+
+
+Explain the OSI layers for HTTP and ARP.
+
+Layer used for HTTP:
+
+Layer 7 - Application layer
+
+
+Layer used for ARP:
+
+Layer 2 - Data Link Layer
+
+
+
+
