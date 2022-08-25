@@ -1,3 +1,9 @@
 
 netcat - can be used as a listener and a popular utility when conducting a reverse shell hack. A reverse Shell hack tricks the users target machine into communicating via a specified port. This is accomplished by using a rubber ducky USB that runs the connections script (remote connectiong payload) or a phishing email that tricks the victim into downloading and running the script on the target machine. 
 run command on attacker machine 1st: nc -l -p <port number>
+
+
+references: 
+https://hak5.org/blogs/payloads/tagged/remote-access
+https://www.youtube.com/watch?v=bXCeFPNWjsM
+https://www.youtube.com/watch?v=M6bhXx75RMs
