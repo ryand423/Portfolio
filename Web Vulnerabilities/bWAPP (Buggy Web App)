@@ -1,1 +1,7 @@
 bWapp 
+
+run this command from the Linux terminal to launch the bwapp container:
+
+docker exec -it bwapp bash
+
+
